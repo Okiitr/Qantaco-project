@@ -1,0 +1,106 @@
+h2 {
+    margin-bottom: 20px;
+}
+
+.logincontainer {
+
+    max-width: 420px;
+    margin:auto;
+    margin-top: 8%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #bbbcb5;
+    padding: 20px;
+    border-radius: 30px;
+   
+}
+.row{
+    margin-top: 10px;
+}
+.customer-container {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 1%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #bbbcb5;
+    padding: 20px;
+    border-radius: 40px
+}
+
+.customer-list-container {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f2f2f200;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+button.savebtn {
+    padding: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+    background-color: #315defe8;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+button.login-register{
+    padding: 7px;
+    text-align: center;
+    background-color: rgb(15 16 15 / 23%);
+    margin-top: 11px;
+    width: 25%;
+    border-radius: 7px;
+
+}
+
+button.logout-button {
+    padding: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+    margin-top: 24px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 7px;
+}
+
+.customer-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.customer-list li {
+    margin: 10px;
+    padding: 2px;
+    background: #bbbcb5;
+    border-radius: 12px;
+}
+
+
+input[type=text], [type=date], [type=password] {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    border-radius: 13px;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  
+  
