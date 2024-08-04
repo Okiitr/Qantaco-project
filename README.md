@@ -37,6 +37,7 @@
 
     - Backend: `http://localhost:8000`
     - Frontend: `http://localhost:3000`
+    - use superuser for login or you can register a new user as well
 
 ## Design Patterns
 
