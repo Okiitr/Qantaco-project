@@ -22,22 +22,23 @@
     ```
 
 4. **Apply Migrations:**
-
+    Once all containers are ready apply migrations
     ```sh
     docker-compose exec backend python manage.py migrate
     ```
 
 5. **Create a Superuser:**
-
+   
+    If you want to create a superuser use the below command otherwise skip 
     ```sh
     docker-compose exec backend python manage.py createsuperuser
     ```
 
-6. **Access the Application:**
+7. **Access the Application:**
 
     - Backend: `http://localhost:8000`
     - Frontend: `http://localhost:3000`
-    - use superuser for login or you can register a new user as well
+    - Use superuser for login or if you don't have superuser then register a new user first and then login 
 
 ## Design Patterns
 
@@ -52,9 +53,6 @@
 - **React Components**: Functional components are used for the frontend.
 - **Axios**: Used for making HTTP requests to the backend API.
 - **State Management**: `useState` and `useEffect` hooks are used for managing state and side effects.
-
-## Architecture Diagram
-
 
 ## Assumptions and Decisions
 
