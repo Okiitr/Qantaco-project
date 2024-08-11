@@ -15,6 +15,7 @@ import dj_database_url
 from pathlib import Path
 from datetime import timedelta  
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0q0sj^m9!(ebat^%a1i!&dq1q@b92egnr$sa6gmr4of@8k=^_='
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -49,8 +50,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -86,6 +85,28 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+from dotenv import load_dotenv
+
+env = load_dotenv()
+print(os.getenv("DATABASE_URL"))
+# SECRET_KEY = 'django-insecure-0q0sj^m9!(ebat^%a1i!&dq1q@b92egnr$sa6gmr4of@8k=^_='
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('POSTGRES_DB'),
+#         'USER': os.getenv('POSTGRES_USER'),
+#         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+#         'HOST':"localhost",
+#         'PORT': 5432
+
+#     }
+# }
 
 #  added rest framework authentication 
 REST_FRAMEWORK = {
@@ -112,10 +133,12 @@ SIMPLE_JWT = {
     'TOKEN_TYPE_CLAIM': 'token_type',
 }
 
+# DATABASE_URL="postgres://postgres:oman@123@db:5432/qantaco-app"
 
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
+# DATABASES = {
+#     'default': dj_database_url.config(DATABASE_URL)
+# }
+
 
 
 # DATABASES = {
