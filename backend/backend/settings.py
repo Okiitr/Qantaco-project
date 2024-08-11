@@ -88,7 +88,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 from dotenv import load_dotenv
 
 env = load_dotenv()
-print(os.getenv("DATABASE_URL"))
 # SECRET_KEY = 'django-insecure-0q0sj^m9!(ebat^%a1i!&dq1q@b92egnr$sa6gmr4of@8k=^_='
 SECRET_KEY = os.getenv('SECRET_KEY')
 
