@@ -4,7 +4,9 @@ services:
   db:
     image: postgres:13
     environment:
-      - .env
+      POSTGRES_DB: qantaco-app
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: oman@123
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
